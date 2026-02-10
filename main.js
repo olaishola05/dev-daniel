@@ -46,9 +46,44 @@ paragraph.textContent = 'Something Amazing!';
 
 paragraph.setAttribute('placeholder', 'This is DOM manipulation');
 
+const classes = ['red', 'blue', 'purple'];
+
 btn.addEventListener('click', () => {
-  btn.style.backgroundColor = 'dodgerBlue';
-  btn.style.color = 'white';
-  btn.style.fontSize = '20px';
-  btn.textContent = 'Magic!';
+  // btn.style.backgroundColor = 'dodgerBlue';
+  // btn.style.color = 'white';
+  // btn.style.fontSize = '20px';
+  // btn.textContent = 'Magic!';
+  // btn.style.display = 'none';
+  // const randomIndex = Math.floor(Math.random() * classes.length);
+  // const newClass = classes[randomIndex];
+  // btn.classList.remove(...classes);
+  // btn.classList.add(newClass);
+  // console.log(`Applied: ${newClass}`);
 });
+
+// Another Approach
+let currentIndex = -1; // -1 means no class is applied yet
+btn.addEventListener('click', () => {
+  if (currentIndex >= 0) {
+    btn.classList.remove(classes[currentIndex]);
+  }
+  currentIndex++;
+
+  if (currentIndex === classes.length) {
+    currentIndex = -1;
+  } else {
+    btn.classList.add(classes[currentIndex]);
+  }
+});
+
+const children = document.querySelectorAll('.child');
+console.log(children[children.length - 1]);
+
+[1, 2, 3].forEach((num) => {
+  // return num * 2;
+});
+
+const temp = [1, 2, 3];
+for (let x = 0; x < temp.length; x++) {
+  // console.log(temp[x]);
+}

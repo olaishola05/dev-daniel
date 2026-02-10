@@ -36,17 +36,32 @@
         align-items: center;
         justify-content: center;
 
+        .item {
+            /*width: 100%;*/
+            background-color: red;
+        }
+    }
 
-    .item {
-        /*width: 100%;*/
-        background-color: red;
+    .image {
+        width: 500px;
+    }
+
+    .image img {
+        width: 100%;
     }
 }
 
-.image {
-    width: 500px;
+.red {
+    background-color: red;
+    color: white;
 }
 
-.image img {
-    width: 100%;
+.blue {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.purple {
+    background-color: purple;
+    color: white;
 }
